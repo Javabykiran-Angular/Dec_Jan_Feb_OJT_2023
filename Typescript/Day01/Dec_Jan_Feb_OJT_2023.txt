@@ -1,0 +1,34 @@
+			Welcome To Angular Module 12
+				  Sumit Raokhande
+
+- B.E.Electronics, KBP satara
+- M.Tech Electronics, Walchand College Sangli
+- C-Dac Wimc , Sunbeam pune
+- worked as Mobile Application developer at tivre business solution
+- worked on J2ME,Symbian,Windows Mobile,Reaserach Motion
+- Worked as Android developer at veetron 
+- Live android application prasieo,autohub,garage
+- Worked as JDE Developer of Oracle Product
+- Worked as OpenSDK developer
+- work as angular developer
+- work on google cloud & docker 
+
+
+- Daily mon to frid 
+- time duration 1.15 min avg => it may be more 1.30hr it may be less 1hr 1.15 min it depends upon the topic 
+- course duration 55hr to 60hr including project
+- there is no any other faculty to handle that module only one man show 	
+- u hv to connect sharp 2.30pm 
+- daily code will given that code will available git hub repo. except images 
+- interview question will provide at the end 
+- project will also do 
+- all recirding will given but that recording is only viewing purpose 
+and that recording is present at least 3-4 days on the cloud
+- OOPS concept 
+- basics of HTML 
+- basics of CSS 
+ 
+
+- Typescript - 8days- 9days
+- Angular 12  
+- Daily practice is most angular 
