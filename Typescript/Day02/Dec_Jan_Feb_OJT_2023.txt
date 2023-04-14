@@ -1,0 +1,44 @@
+Last Lecture
+1 S/w Setup
+	node.js
+	vscode
+	typescript
+	
+2 difference between angular js Vs angular 2+
+	javascript Vs Typescript
+	
+	- js based / typescript based
+	- it is object based lang / OOPS based
+	- MVC / MVW 
+	- memory mang. is not effective / memory mag is effective
+	- speed & performance decrease / increase
+	- mobile comunity is nit support / it is support to all 
+	
+
+Today Lecture
+1 what is angular 12?
+2 Why Angular? / advantage of Angular ?/ explain the features of angular?
+3 what is typescript? 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
