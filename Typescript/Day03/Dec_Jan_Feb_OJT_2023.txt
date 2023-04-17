@@ -1,0 +1,62 @@
+Last Lecture
+1 what is angular 12?
+	- front end technology
+	- it is freamwork 
+	- angular,react,....
+2 Why Angular? / advantage of Angular ?/ explain the features of angular?
+	- it provide module, template declration, end to end tooling , DI, services 
+	- one freamwork to all 
+	- universal freamwork
+	- cross platform progressing web app 
+	- make easy to complex appilcation spa 
+	- speed & performance 
+	- in build cli 
+	- code splitting 
+	- equal role for application writing & testing 
+3 SPA 
+	- 1 head & 1 body 
+	- spa envir. 
+	
+4 what is typescript? 
+	- oops lang
+	- typescript is superset of js 
+	- typescript= ecma script standard + ecma version + additional features 
+	- advantage
+		1 strong static typing
+		2 compile time 
+		3 support oops 
+	- disadvntages 
+	 1 browser don't understand ts 
+		tsc compiler -> it transcompile .ts file to .js file 
+	2 compile time is more 
+		
+
+Today Lecture
+1 vscode overview  
+	- code editor 
+2 Simple Pgm in Typescript
+3 variable creation 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
