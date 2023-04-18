@@ -1,0 +1,52 @@
+Last Lecture
+1 vscode overview  
+	- code editor 
+2 Simple Pgm in Typescript
+	demo1.ts
+	
+	console.log("Hello World");
+	console.log('Welcome to Angular 12');
+	console.log(` 
+			......
+	`)
+	
+	tsc demo1.ts & node demo1.js
+	
+	
+3 variable creation 
+	var a1,a2;
+	var a_1,a$1;
+	
+
+Today Lecture
+1 Data types
+2 literal
+3 type assertions
+4 operators
+5 constrol stmt
+6 loop stmt=> while,do-while 
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
