@@ -1,0 +1,82 @@
+Last Lecture
+1 Data types
+	number,string,boolean,nay,void,mise.-> null& undefined
+		var a:number=10;
+		console.log("Value of a "+a)
+		console.log(`Value of a ${a} `)
+		var str!:string;
+		console.log("Value of str "+str)
+		var a:any;
+		a=2.5;
+		a='sumit'
+		..
+		var s=6;
+2 literal
+	var a:number|string;
+	
+	var a:20|boolean; 
+	
+3 type assertions
+	
+	1 angle bracket 
+		var a:any 
+		
+		var temp=(<string> a);
+		temp.
+		
+	2 as syntax
+		var temp=(a as srring )
+	
+	
+4 operators
+	airtmatic,logical,bitwise,relational,conditional,ternafry,unary
+	=== => it checks data type as well as value 
+5 constrol stmt
+	if(count<4){
+	...
+	}else {
+	...
+	}
+	
+	switch(choice){
+	....
+	}
+6 loop stmt=> while,do-while 
+	while (count!=0){
+	....
+	}
+	
+	do{
+	...
+	}while(count!=0)
+
+Today Lecture
+1 for loop 
+2 var Vs let Vs const 
+3 functions
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
