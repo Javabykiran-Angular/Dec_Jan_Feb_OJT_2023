@@ -1,0 +1,68 @@
+Last Lecture
+1 for loop 
+	 for(var i=0;i<4;i++){
+	 ...
+	 }
+	 console.log(i)
+	// let => within nereast block
+		for(let i=0;i<4;i++){
+	 ...
+	 }
+	//const => global as well as local  
+	 
+2 var Vs let Vs const 
+3 functions
+	function add1(){
+	....
+	}
+	add1();
+	
+	function add1(a:number,b:number){
+	....
+	}
+	add1(4,5);
+
+
+function add1():number{
+	return (8+8)
+	}
+	let res=add1();
+	
+	function add1(a:number,b:number):number{
+	return (a+b)
+	}
+	
+	console.log(add1(4,6))
+	
+Today Lecture
+1 anonymous functions
+2 fat arrow functions/Arrow functions
+3 FAR
+4 optional parameter function
+5 default parameter function
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
