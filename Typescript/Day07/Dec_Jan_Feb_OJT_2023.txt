@@ -1,0 +1,58 @@
+Last Lecture
+1 anonymous functions
+	let temp=function (a:number,b:number):number{
+		return (a+b)
+	}
+	let res=temp(2,3);
+2 fat arrow functions/Arrow functions
+	let temp= (a:number,b:number):number=>{
+	return (a+b);
+	}
+	let res=temp();
+3 FAR
+4 optional parameter function
+	function add1(a?:number,b?:number){
+	
+	....
+	}
+	add1(2)
+5 default parameter function
+function add1(a:number=70,b?:number){
+	
+	....
+	}
+	add1(45,70);
+
+
+Today Lecture
+1 Basic of array
+2 join
+3 foreach
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
