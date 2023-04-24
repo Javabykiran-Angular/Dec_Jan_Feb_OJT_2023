@@ -1,0 +1,57 @@
+Last Lecture
+1 Basic of array
+	int a:number[]=[4,5,6,8];
+	int a:number[]=[];
+	int a=[7,8,9];
+	int a=[2.5,'sumit',8];
+	int a:any[]=['Sumit',8,true];
+2 join
+
+	for(let i=0;i<a.length;i++){
+	....
+	}
+	
+console.log(a); 
+a.join(" ")
+a.join()
+
+
+3 foreach
+	a.forEach((myvalue,i,arr)=>{
+	....
+	})
+
+Today Lecture
+1 Rest Parameter function
+2 push & pop method 
+3 Splice method
+4 slice
+5 map 
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
