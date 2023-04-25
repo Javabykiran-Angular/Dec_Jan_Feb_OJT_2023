@@ -1,0 +1,66 @@
+Last Lecture
+1 Rest Parameter function
+	function display(str:string,...item:number[]){
+	....
+	}
+	display(10,45,63);
+	
+2 push & pop method 
+	let a:number[]=[];
+	a.push(45);
+	console.log(a)
+	a.push(78,80,90);
+	console.log(a)
+	let res=a.pop();
+	
+3 Splice method
+	a.splice(4,0,745);
+	a.splice(5,1);
+	a.splice(4,0,90,85);
+	a.splice(2,1,100)
+	a.splice(7,1,800,900)
+4 slice
+	let temp=course.slice(1,8)
+	let temp=course.slice(1)
+	let temp=course.slice()
+	
+5 map 
+	let sqrarr=a.map((value)=>{
+		return (vaue*value)
+	})
+	
+
+Today Lecture
+1 destructing/derefrence of array 
+2 Shallow Copy & deep Copy (Js Interview Question)
+3 Swapping variables without using 3rd variables (Js interview Question)
+4 Functions that return multiple values (JS interview Question)
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
