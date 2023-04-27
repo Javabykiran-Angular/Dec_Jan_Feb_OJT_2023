@@ -1,0 +1,126 @@
+Last Lecture
+1 json object
+	let obj={
+		id:9,
+		fname:"sumit",
+		lname:''
+	}
+	
+	1 dot operator 
+		console.log(`
+			${obj.id}
+			....
+		`)
+	2 square operator 
+	console.log(`
+			${obj["id"]}
+			....
+		`)
+	
+2 array of object 
+
+	let arrobj=[
+		{
+			id:9,
+			fname:'sumit'
+			..
+			country:{
+				cid:1,
+				cname:'India'
+			},
+			month:["jan",...];
+			result:[
+				{
+					subj:'m1',
+					marks:40
+				},
+				{
+					subj:'m1',
+					marks:40
+				},
+				{
+					subj:'m1',
+					marks:40
+				}
+			]
+		},
+		{
+			id:9,
+			fname:'sumit'
+			..
+		},
+		{
+			id:9,
+			fname:'sumit'
+			..
+		}
+	]
+	
+	for(let i=0;i<arrobj.length;i++){
+		
+		console.log(`
+			
+				${arrobj[i].id}
+				${arrobj[i].fname}
+				${arrobj[i].country.cname}
+				${arrobj[i].month.json(" ")}
+			
+		`)
+		
+		for(let j=0;j<arrobj[i].result.length;j++){
+				arrobj[i].result[j].subj
+		}
+		
+		arrobj[i].result.forEach((value)=>{
+				value.subj
+				value.marks
+		})
+		
+	}
+	
+	let json={
+		msg:'',
+		data:[
+			{
+			
+			}
+		]
+	}
+
+
+Today Lecture
+1 Additional features of typescript
+2 class object,property,method
+3 Constructor
+4 Access specifier
+5 access in same package
+6 access in different package
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
