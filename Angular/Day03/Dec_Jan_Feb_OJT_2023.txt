@@ -1,0 +1,89 @@
+Last Lecture
+1 Angular Arch Overview	
+	- angular is component orientated arch.
+	- component
+		- view file => .html
+		- stylesheet => .css
+		- component file => .ts 
+			
+		- testing file => specs.ts
+		
+		- metadata
+			- it gives extra information about component to the angular 
+				@Component({
+					....
+				})
+		- data binding 
+			- data flow from component to view 
+			1 string interpolation
+			2 property binding
+			3 style binding
+			4 class binding
+		- event binding 
+			- data flow from view to component
+				click,change,mouse,k/b ,custom ....
+		- directive 
+		  - it manipulate/change ur behaviour of view file 
+		  - attribute,structural,component,event directive
+		  
+		- App module => module => it is collection of classess,method,services,component,interface
+			- it is root module file => one root is always present 
+			- one & more module is there 
+			1 component declaration 
+				- to register the component 
+				- it creates a factory class of that component				
+			2 import
+				- to register the module 
+				- and to use in ur application 
+			3 services
+				- it is simple class 
+				- u can write ur business logic 
+				- providers => it is key => register => it create a singleton object => we use DI 
+			4 routing
+				- to navigate to one component to another component
+				- data send 		
+		- injector
+			- to inject the services 
+			- it may 3rd party or inbuild services 
+			@injectable,@inject 
+			
+2 Angular Application Flow
+
+Today Lecture
+1 Create component manually 
+2 create component through cli 
+3 data binding
+ - data flow from component to view 
+4 string interpolation
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
