@@ -1,0 +1,16 @@
+.commonclass{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+
+}
+.img1{
+    
+    border: 2px solid red;
+}
+
+.img2{
+    
+    border: 2px dotted green;
+   
+}
