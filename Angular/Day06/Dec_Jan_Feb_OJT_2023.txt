@@ -1,0 +1,79 @@
+Last Lecture
+1 class binding
+	<h2 [class]="myclass"> Apply Class binding 
+	<h2 [class.danger]="rating<4"
+		[class.warning]="rating>=4 || rating<=6"> Apply Class binding condition
+		
+	<div [ngClass]="jsonObj">
+	
+	
+	.ts file
+	myclass:string="success";
+	rating:number=2;
+	isError:boolean=true;
+	jsonObj={
+		"success":!this.isError,
+		"danger": this.isError,
+		"special":this.isSpecial
+	}
+	
+2 event binding
+ - data flow from view file to component file 
+3 click event
+	(eventname)="onclick()"
+	<button (click)="onClick()"
+	<img src='..' (click)="onImage()"
+	
+	.ts file 
+	count:number=0;
+	onClick(){
+	if(this.count==0){
+	console.log("")
+	this.count++;
+	}
+		
+	}
+	
+	onImage(){
+		console.log("...")
+	}
+	
+
+Today Lecture
+1 $event 
+2 template ref variable
+3 real time example
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

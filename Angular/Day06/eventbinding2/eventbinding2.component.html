@@ -1,0 +1,32 @@
+<p>eventbinding2 works!</p>
+
+<!-- $event 
+    - it is a special variable given by angular 
+    - it gives current DOM Element information
+    - we can access only data but u can't change/manipulate a data 
+    - it is a json object 
+    - u can appl y any html tag but it gives current dom element information 
+-->
+
+    <!-- <button value="Doller Event..." (click)="onDollefrevent($event)" >Doller Event</button> -->
+
+
+    <!-- template ref variable
+        - it gives DOM Element information
+        - it holds the handle/object of that html element
+        - u can access or manipulate behavoiur of html element 
+        - u can apply any html tag 
+        - syntax 
+        #uniquename 
+    -->
+    <input type="text" #inputname placeholder="Enter the Name "> <br><br>
+    <button (click)="onClick(inputname)" >Click</button> <br><br>
+
+    <input type="text" #inputname1 placeholder="Enter the Name "> <br><br>
+    <button (click)="onClick1(inputname1.value)" >Click</button>
+<br><br>
+
+    <input #num1 type="text" placeholder="Enter the Num1"><br><br>
+    <input #num2 type="text" placeholder="Enter the Num2"><br><br>
+    <button (click)="onAddition(num1.value,num2.value)">Addition</button> <br><br>
+    <input [value]="res" type="text" placeholder="Result"><br><br>
