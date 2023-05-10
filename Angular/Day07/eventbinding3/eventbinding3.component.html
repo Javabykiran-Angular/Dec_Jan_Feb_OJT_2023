@@ -1,0 +1,47 @@
+<p>eventbinding3 works!</p>
+
+<!-- change event 
+    - u can apply any html tag 
+    - 
+    syntax => (change)="eventHandler"
+-->
+
+<!-- <input (change)="onChange()" placeholder="Enter the name " > -->
+
+<input type="text" (keyup)="onKeyup()" placeholder="Key up event">
+<br><br>
+<input type="text" (keydown)="onKeydown()" placeholder="Key down event"> <br><br>
+
+<input #inputcount (keyup.enter)="onKeyEnter(inputcount.value)" type="text" placeholder="Event filtering">
+<br><br>
+
+<!-- 
+ event binding without event handler 
+-->
+
+<button (click)="result=8+8" >send </button> {{result}}
+
+<hr>
+
+<h2>Two way binding</h2>
+
+<!-- ngModel
+    - it is attribute directive
+    - it is used for two way binding 
+    -- u will get upadatated data 
+    - u have use notation 
+        banna in the box 
+        [(ngModel)]="PropertyName"
+    - we have to use inbuild module
+    FormsModule => import => app.module.ts 
+    - u can apply any html tag 
+-->
+
+<input type="text" placeholder="Enter the name" [(ngModel)]="name"> {{name}}
+
+
+
+
+
+
+

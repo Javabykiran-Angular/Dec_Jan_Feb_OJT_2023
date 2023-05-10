@@ -1,0 +1,77 @@
+Last Lecture
+1 $event 
+	<button (click)="onClick($event)">
+	.ts file
+	
+	onClick(myevent:any){
+		console.log(myevent)
+		console.log(myevent.target.value)
+	}
+2 template ref variable
+	- 
+	<input #inputname>
+	<button (click)="onClick(inputname)">
+	.ts file
+	onClick(mydata:any){
+		console.log(mydata)
+		mydata.style.background='green';
+		mydata.style.color='white'
+	}
+	
+3 real time example
+	<input #num1>
+	<input #num2>
+	<button (click)="onClick(num1.value,num2.value)">
+	<input [value]="res">
+	.ts 
+	onClick(num1:any,num2:any){
+		
+		let n1=+num1;
+		let n2=+num2;
+		
+		this.res=n1+n2;
+	}
+
+Today Lecture
+1 change event 
+2 k/b event
+	1 keyup
+	2 keydown
+		- event filtering
+		- enter			
+3 event binding without event handler
+4 two way binding
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
