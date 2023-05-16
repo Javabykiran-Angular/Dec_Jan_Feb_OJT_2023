@@ -1,0 +1,83 @@
+Last Lecture
+1 change event 
+	<input (change)="onChange()">
+	.ts file 
+	
+	onChange(){
+	....
+	}
+2 k/b event
+	1 keyup
+		<input (keyup)="onKeyUp()">
+		.ts file 
+		onKeyUp(){
+		...
+		}
+	2 keydown
+	
+	<input (keydown)="onKeyDown()">
+		.ts file 
+		onKeyDown(){
+		...
+		}
+	
+		- event filtering
+		- enter
+<input (keyup.enter)="onEnter()">	
+3 event binding without event handler
+	<button (click)="result=8+8"
+	.ts file 
+	result:number=0;
+4 two way binding
+	<input [(ngModel)]="name">{{name}}
+	app.module.ts
+	import :
+	[ FormsModule]
+
+Today Lecture
+1 Structural Directive	
+	- u can update/chnage ur DOM Structure dynamically so it is called strctural directive
+	1 *ngIf => if u want check condition dynamically 
+	2 *ngFor => if u want iterate dynamically 
+	3 *ngSwitch => to excecute a specific condition 
+	
+	
+2 if directive
+3 ng-template
+	- It is component directive 
+	- initially u want to hide something then we use ng-template
+4 for directive
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

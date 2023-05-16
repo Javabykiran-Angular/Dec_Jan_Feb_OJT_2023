@@ -1,0 +1,7 @@
+ul{
+    list-style: none;
+}
+
+th,tr,td{
+    border: 1px solid;
+}
