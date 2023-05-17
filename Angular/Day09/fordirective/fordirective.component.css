@@ -1,0 +1,18 @@
+ul{
+    list-style: none;
+}
+
+th,tr,td{
+    border: 1px solid;
+}
+
+.highlight{
+    background: green;
+    color: white;
+}
+.priceHighlight{
+    background-color: red;
+}
+.qtyHighlight{
+    background-color: darkorange;
+}

@@ -1,0 +1,73 @@
+Last Lecture
+1 Structural Directive	
+	- u can update/change ur DOM Structure dynamically so it is called strctural directive
+	1 *ngIf => if u want check condition dynamically 
+	2 *ngFor => if u want iterate dynamically 
+	3 *ngSwitch => to excecute a specific condition 
+	
+	
+2 if directive
+	<div *ngIf="rating<4;else elsepart">
+			<h2> Condition is true </h2>
+	</div>
+	<ng-template #elsepart>
+		<h2> Condition is false </h2>
+	</ng-template>
+
+3 ng-template
+	- It is component directive 
+	- initially u want to hide something then we use ng-template
+4 for directive
+	<ul >
+		<li *ngFor="let item of course;index as i "> {{i+1}} {{item}}</li>
+	</ul>
+	
+	<table>
+		...
+	<tbody>
+		<tr *ngFor="let item of arrprod">
+			<td> {{item.name}}
+			...
+		</tr>
+		
+
+Today Lecture
+1 for directive
+2 Mouse event 
+	1 mouseover
+	2 mouseout
+3 Real time example
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
