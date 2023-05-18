@@ -1,0 +1,72 @@
+Last Lecture
+1for directive
+2 Mouse event 
+	1 mouseover
+	2 mouseout
+	<table>
+		<tbody>
+			<tr ... (mouseover)="onMouseOver(item)"
+				[ngClass]="{
+					'highlight':selected===item.name
+				}"
+				
+				(mouseout)="onMouseOut()"
+			>
+				<td>...
+			</tr>
+			
+	.ts file 
+	selected:string='';
+	
+	onMouseOver(item:any){
+	...
+	this.selected=item.name;
+	
+	}
+	
+	onMouseOut(){
+		this.selected='';
+	}
+	.css 
+	highlight{
+		background: green;
+		color:white;
+	}
+3 Real time example
+
+Today Lecture
+1 Switch Directive
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
