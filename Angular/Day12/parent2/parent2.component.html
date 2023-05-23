@@ -1,0 +1,21 @@
+<p>parent2 works!</p>
+
+<div #mydiv>
+    <p>Access element in ts directly</p>
+</div>
+
+
+<div class="maindiv">
+
+
+<div class="buttondiv">
+    <button (click)="onPropertyAccess()" >Child Property</button> 
+    <button (click)="onMethodAccess()">Child Method</button><br><br>
+    <button (click)="onIncrement()" >Increment</button>
+    <button (click)="onDecrement()" >Decrement</button>
+</div>
+<div class="childdiv">
+    <app-child2></app-child2>
+</div>
+
+</div>

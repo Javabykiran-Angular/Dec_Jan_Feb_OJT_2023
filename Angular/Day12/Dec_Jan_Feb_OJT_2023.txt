@@ -1,0 +1,47 @@
+Last Lecture
+1 Component interaction
+ - pre -requiest 
+	1 parent-child relationship is required
+2 @Input()
+3 @Output()
+
+Today Lecture
+1 @ViewChild
+	1 if u want to access parent html element in ts file directly 
+	2 u can access child property or child method directly into parent ts 
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

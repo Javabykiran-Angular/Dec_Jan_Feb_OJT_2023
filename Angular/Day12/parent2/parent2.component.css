@@ -1,0 +1,24 @@
+.divClass{
+    background-color: red;
+    color: white;
+    
+}
+
+.maindiv{
+    display: flex;
+}
+
+.maindiv .buttondiv{
+    align-content: center;
+    line-height: 10em;
+    margin: 20px;
+}
+
+.buttondiv button{
+    margin: 10px;
+}
+
+.maindiv .childdiv{
+    padding: 12px;
+    border: 2px solid red;
+}
