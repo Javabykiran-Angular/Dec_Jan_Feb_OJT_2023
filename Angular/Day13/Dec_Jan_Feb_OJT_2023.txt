@@ -1,0 +1,93 @@
+Last Lecture
+1 @ViewChild
+	1 if u want to access parent html element in ts file directly 
+	
+	parent.html
+	<div #mydiv>
+		...
+		
+	</div>
+	.ts 
+	AfterViewInit
+	
+	@ViewChild('mydiv') Mydiv!:ElementRef;
+	
+	ngOnInit(){
+	...
+	}
+	ngAfterview(){
+		...
+		this.Mydiv.nativeElement.className='...';
+		this.Mydiv.nativeElement.style.background=''
+	}
+	
+	2 u can access child property or child method directly into parent ts
+
+parent.ts
+	
+	@ViewChild(ChildComp) ChildAccess!:ChildComp;
+	parent .html
+	<button (click)="onChildProperty()" > Access Property
+	<button (click)="onChildMethod()" > Access Method
+	
+	
+	parent.ts
+	onChildProperty(){
+		this.ChildAccess.username="Sumit";
+	}
+	
+	onChildMethod(){
+	
+		this.ChildAccess.onAlert();
+	}
+
+	.ts 
+	username:string='default'
+	
+	.html
+	<h2> {{username}}</h2>
+	<button (click)="onAlert()">Alert</button>
+	
+	child.ts
+	onAlert(){
+	alert("Hi Welcome "+this.username);
+	}
+
+
+Today Lecture
+1 Inbuild Pipe
+	- it is used to transform ur data without chnaging its original value 
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
