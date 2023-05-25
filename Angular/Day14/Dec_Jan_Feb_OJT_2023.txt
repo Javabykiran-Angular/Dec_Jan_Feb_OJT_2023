@@ -1,0 +1,68 @@
+Last Lecture
+1 Inbuild Pipe
+	- it is used to transform ur data without chnaging its original value 
+	
+	<h2> {{strDetails | lowercase}}</h2>
+	<h2> {{strDetails | uppercase}}</h2>
+	<h2> {{strDetails | titlecase}}</h2>
+	<h2> {{strDetails | slice:1:2}}</h2>
+	
+	<h2> {{0.25 | percent}}</h2>
+	<h2> {{0.025 | percent:'1.1'}}</h2>
+	<h2> {{0.025 | percent:'2.1'}}</h2>
+	
+	<h2> {{0.25 | currency}}</h2>
+	<h2> {{0.25 | currency:'INR'}}</h2>
+	<h2> {{0.25 | currency:'INR':'code'}}</h2>
+	
+	<h2> {{5.678245 | number:'1.2-3'}}</h2>
+	<h2> {{5.678545 | number:'1.2-3'}}</h2>
+	
+	<h2> {{mydate | date:'mediumDate'}}</h2>
+	<h2> {{mydate | date:'shortDate'}}</h2>
+	<h2> {{mydate | date:'dd-MM-yyyy'}}</h2>
+	<h2> {{mydate | date:'dd'}}</h2>
+	<h2> {{mydate | date:'longDate'}}</h2>
+	
+	<h2> {{mydate | date:'longDate'|uppercase}}</h2>
+	<h2> {{mydate | date:'hh:mm:ss a'}}</h2>
+
+
+Today Lecture
+1 Custom Pipe 
+2 @Pipe
+3 PipeTransform => interface
+4 transform => Method
+6 Pure Pipe & impure pipe
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
