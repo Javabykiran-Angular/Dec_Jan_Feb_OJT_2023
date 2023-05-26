@@ -1,0 +1,73 @@
+Last Lecture
+1 Custom Pipe 
+2 @Pipe
+3 PipeTransform => interface
+4 transform => Method
+6 Pure Pipe & impure pipe
+
+	@pipe({
+		name:'summary'
+		pure:false
+	})
+	export class SummaryPipe extends PipeTransform{
+		transform(value:any,start:number=0,end:number=20){
+			let temp=(<string>value);
+			
+			return (temp.substring(start,end)+"...");
+		}
+	}
+	
+	
+	custompipe.html
+	
+	{{strdetails | summary:0:30}}
+	{{strdetails | summary}}
+	
+	
+	app.module
+	declaration:[
+	SummaryPipe
+	]
+
+
+Today Lecture
+1 Services
+	- It is simple class 
+	- It is used for to write a Business logic
+	- It is used for code resualbility 
+	- It is Used for code maintability 
+	- It is also used for to connect ur backend server
+	- It provide a isolation to component
+2 Dependancy Injection => 
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
