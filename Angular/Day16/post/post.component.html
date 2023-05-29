@@ -1,0 +1,16 @@
+<p>post works!</p>
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>    
+    <tbody>
+        <tr *ngFor="let item of posts">
+            <td > {{item.id}} </td>
+            <td> {{item.title}} </td>
+            <td> {{item.body}} </td>
+        </tr>
+    </tbody>
+</table>
