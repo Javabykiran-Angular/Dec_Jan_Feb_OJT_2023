@@ -1,0 +1,133 @@
+Last Lecture
+1 What is Http?
+	- it is hypertext tramsfer protocol
+	- what is mean by protocol
+		- it is set of rules 
+	
+2 Http Request/Response
+		
+	Http Request=> it has 2 parts  
+		1 Http header
+			- it conatin url 
+			- http method 
+			- content type 
+				- image/doc,exel/pdf/text/json 
+			- ip addres 
+			- date & time 
+			- Auth token 
+			- cors policy 
+		2 Http body 
+			- data 
+				- text/xml/json 
+	Http Response=> it has 2 parts  
+		1 Http header
+			- it conatin url 
+			- http method 
+			- content type 
+				- image/doc,exel/pdf/text/json 
+			- ip addres 
+			- date & time 
+			- Auth token 
+			- cors policy 
+			- status code 
+				1 2xx => it is used for success/ok 200-299
+				2 3xx => redirection 300-399
+				3 4xx => client side error 400-499
+				4 5xx => Server side error 500-599
+		2 Http body 
+			- data 
+				- text/xml/json 
+		
+	
+3 Http method
+	1 get  => to fetch a data from backend 
+	2 post => to send data to backend server 
+	3 put  => to update a particular record 
+	4 delete => to delete a particular record 
+	
+	
+4 https://jsonplaceholder.typicode.com/posts
+	- it is fake web service 
+	it is not store any value into database but it gives a response of u r request
+	
+	ng g s http 
+	
+	@Injectable({
+		provideIn:"root"
+	})
+	export class HttpService{
+		
+		url:string='....'
+		
+		constructor(private http:HttpClient){
+		
+		}
+		
+		getPost(){
+			return this.http.get(this.url);
+		}
+		
+	}
+	
+	post.ts
+	posts:any[]=[];
+	constructor(private service:HttpService){}
+	
+	ngOnInit(){
+		this.getpost()
+	}
+	
+	getpost(){
+			this.service.getPost()
+			.subscribe((response:any)=>{
+				this.posts=response;
+			})
+	}
+	
+	app.module.ts
+	
+	import : HttpClientModule
+	
+		
+5 @Injectable()
+6 Observable
+
+Today Lecture
+1 Post 
+2 put
+3 delete 
+4 Error handle 
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
