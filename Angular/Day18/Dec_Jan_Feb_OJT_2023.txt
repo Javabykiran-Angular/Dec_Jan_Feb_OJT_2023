@@ -1,0 +1,117 @@
+Last Lecture
+1 Post 
+	<input #title>
+	...
+	<button (click)="onClick(title.value,..)">
+	
+	.ts file 
+	onClick(mytitle:any,mybody:any){
+		let obj={
+			title:mytitle,
+			body:mybody
+		}
+		this.service.postData(obj)
+		.subscribe((response)=>{
+			....
+		})
+	}
+	
+	service.ts
+	postData(obj:any){
+		return (this..http.post(this.url,obj))
+	}
+2 put
+<div [hidden]="isHidden">
+	<input [(ngModel)]="id" readonly>
+	
+	<button (click)="onUpdate()">
+	
+</div>
+
+.ts
+onEdit(item:any){
+	this.id=item.id;
+	...
+	this.isHidden=false;
+}
+
+onUpdate(){
+	let obj={
+		id:this.id,
+		title:this.title,
+		...
+	}
+	this.service.UpdateData(obj)
+	.subscribe((response)=>{
+	....
+	})
+}
+
+service.ts
+UpdateData(obj:any){
+	return (this.http.put(`${this.url/${obj.id}`,obj))
+}
+	
+	
+3 delete 
+	.ts file
+	onDelete(id:any){
+		this.service.DeleteData(id)
+		.subscribe((response)=>{
+		...
+		},(myerror)=>{
+			if(myerror.status>=400 && ...){
+				
+			}else if(...)
+		})
+	}
+	
+	service.ts
+	DeleteData(id:any){
+		return this.http.delete(`${this.url}/${id}`)
+	}
+4 Error handle 
+
+Today Lecture
+1 Routing 
+	- navigation from one component to another component
+2 Routing Steps
+	1 configure the route 
+	2 <router-outlet>
+	3 establish the link/navigate  between component
+3 empty path
+4 wild cart operator
+5 send parameter
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
