@@ -1,0 +1,101 @@
+Last Lecture
+1 Send multiple parameter
+	{
+		path:"Page3/:id/:username",...
+	}
+	
+	home.ts 
+	myid:number=9;
+	myusername:string='';
+	.html
+	<a [routerLink]="['/Page3',myid,myusername]">
+	
+	page3.ts
+	constructor(private route: ActivataedRoute){}
+	
+	GetDatafromUrl(){
+		this.route.ParamMap
+		.subscribe((param:any)=>{
+			param.get("id");
+			...
+		})
+	}
+2 send query parameter
+	.ts 
+	json={
+		id:9,
+		..
+	}
+	.html 
+	/
+	<a routerLink="/queryparameter" [queryParams]="json">
+	
+	.ts 
+	constructor(private route: ActivataedRoute){}
+	
+	GetDatafromUrl(){
+		this.route.queryParamMap
+		.subscribe((param:any)=>{
+			
+		})
+	}
+3 routing perform by navigate method
+	home.html 
+	<button (click)="onPage1()">
+	
+	.ts 
+	constructor(private router:Router){}
+	onPage1(){
+		this.router.navigate(['/Page2',this.myid,this.myusername]);
+	}
+	
+	onQueryparametr(){
+		this.router.navigate(["/queryparameter"],{
+			queryParams:this.json
+		})
+	}
+	
+Today Lecture
+1 child routes 
+2 Lazy Loading
+3 create Custom module 
+ - create custom routing file 
+4 modify the routing
+
+ 
+
+
+
+	
+	
+		
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
