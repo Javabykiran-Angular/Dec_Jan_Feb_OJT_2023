@@ -1,0 +1,105 @@
+Last Lecture
+1 child routes 
+	product 
+	 - mobile,tv,laptop
+	[
+		{
+			path:"product",childern:[
+				{
+					path:"",component:ProductComponent
+				},
+				{
+					path:"mobile",component:MobileComponent
+				}
+				...
+			]
+		}
+	];
+	
+	home.html
+	<a routerLink="/product">
+	
+	product.html
+	<a routerLink="mobile">
+	....
+2 Lazy Loading
+	
+3 create Custom module 
+ - create custom routing file 
+ ng g m user --routing 
+ - listuse,adduser,uodateuser
+ 
+ user-routing.ts
+ 
+ [
+	{
+		path:"",component:listuser
+	}.
+	...
+ ]
+ 
+ app-routing.ts
+ {
+	path:"user",loadChildern:()=> import('../user/user.module').then(m=>m.userModule)
+ }
+ 
+ home.html
+ <a routerLink="/user">
+	listuser.html
+	<a routerLink="adduser">
+	...
+ 
+4 modify the routing
+app.componet.html
+<app-home>
+home.html
+<router-outlet>
+
+[
+	{
+		path:"",component:Page1Component
+	}
+]
+
+Today Lecture
+1 rxjs lib
+2 Subject
+3 BehaviouralSubject
+
+ 
+
+
+
+	
+	
+		
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
