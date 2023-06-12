@@ -1,0 +1,89 @@
+Last Lecture
+1 rxjs lib
+2 Subject
+<app-notification>
+	
+	queryparameter.html
+	<input #inputmsg>
+	<button (click)="onClick(inputmsg.value)">
+	.ts 
+	onClick(msg:string){
+		this.service.senMessage(msg);
+	}
+	GetDatanotify(){
+		this.notificationservice.notification
+		.subscribe((data)=>{
+			this.datareceived=data;
+		})
+	}
+	
+	notification.ts
+	
+	GetDatanotify(){
+		this.notificationservice.notification
+		.subscribe((data)=>{
+			this.datareceived=data;
+		})
+	}
+	
+	notification.service.ts
+	notification=new BehaviouralSubject<string>("welcome ");
+	
+	senMessage(msg:string){
+		this.notification.next(msg);
+	}
+	
+3 BehaviouralSubject
+
+Today Lecture
+1 Overview of Bootstrap
+	- it is css freamwork
+	- Design inbuild classes 
+	- to make application responsive
+	- to make ur application attractive
+	
+2 Basic grid System
+3 Integration of bootstrap
+	1 online
+		- we have to a CDN Link => 27*7 inernet is required 
+		- getbootstrap.com
+	2 offline 
+		
+
+ 
+
+
+
+	
+	
+		
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
