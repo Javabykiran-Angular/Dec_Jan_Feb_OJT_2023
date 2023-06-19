@@ -1,0 +1,107 @@
+Last Lecture
+1 Continue TDF
+2 ngValue
+3 ngSubmit
+
+Today Lecture
+1 Login Api Discussion
+	Its a backend 
+	registration/signup 
+		
+		id => primary key 
+		fname,
+		lname,
+		gender
+		emailid => String => unique
+		password => String 
+		mobileno => string 
+		createdby,
+		created date => date 
+		updatated by => string 
+		updatated date  => date 
+		
+		// Login API 
+		
+		controller
+		
+		@PostMapping("/login")
+		public ResponseEntity<Map> login(@RequestBody Registration reg){
+				Map obj = obj=service.login(reg);
+				return obj;
+		}
+		
+		service.java
+		
+		public Map login(Registration reg){
+			Registration user=dao.login(reg);
+			
+			Map map=new hashMap();
+			
+			if(user!=null){
+			//user is valid 
+				
+				map.put("msg",'Valid User');
+				
+				
+			}else{
+				//invalid user 
+				map.put("msg",'Invalid User')
+			}
+			map.put("user",user);
+			
+			return map;
+		} 
+		
+		dao.java
+		
+		public Registration login (Registration reg ){
+			
+			// Session open 
+			// create criteria query 
+			// crireia.addRestriction => emailID 
+			// password
+			Registration user=  criteria.uniqueResult();
+			return user;
+			
+		}
+	
+2 Login UI
+	
+	
+ 
+
+
+
+	
+	
+		
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
