@@ -1,0 +1,37 @@
+How to Use Font Awsome in Angular 12
+
+step1
+npm install font-awesome@4.7.0 --save
+
+Step2
+Go to angular.json file
+
+"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "appFont": {
+      ....
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
+              "src/styles.css"
+            ],
+
+Step 3
+
+<div class="from-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" style="font-size: 2em;color: #5eba7d;"> 
+				<i class="fa fa-user"></i>
+                </span>
+                <input name="username" class="form-control"
+							placeholder="Enter the Username" type="text">
+            </div>
+		</div>
+			
+			
+			

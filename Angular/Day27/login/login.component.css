@@ -1,0 +1,26 @@
+.loginform{
+    text-align:center;   
+  }    
+  
+  .main-div {
+    background: #fff none repeat scroll 0 0;
+    margin: 10rem auto 30px;
+    max-width: 40%;
+    padding: 50px 70px 70px 71px;
+    border-radius: 15px;
+  }
+  
+  .panel{ 
+    border:0; 
+    border-radius: 0;
+    box-shadow:none; 
+    margin-bottom:0;
+    }
+
+.panel p 
+{ 
+      /* color:#777777; */
+      font-size:14px; 
+      margin-bottom:30px; 
+      line-height:24px;
+}

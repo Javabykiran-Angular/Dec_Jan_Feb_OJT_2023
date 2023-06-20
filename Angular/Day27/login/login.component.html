@@ -1,0 +1,85 @@
+
+<div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="loginform">
+                    <div class="main-div">
+                        <div class="panel">
+                            <h1>Login</h1>
+                            <hr>
+                            <p class="text-success" 
+                            style="font-weight: bold;">
+                            Please enter your email and password</p>      
+                        </div>
+
+                        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+                            <div class="form-group">
+                              <div class="input-group-prepend">
+                              <span
+                                    class="input-group-text"
+                                    style="font-size: 25px;margin-right: 5px; color: #5eba7d"
+                                  >
+                                    <i class="fa fa-user"></i>
+                                  </span>
+                              <input #email="ngModel" 
+                              ngModel type="email" 
+                              name="email" class="form-control" 
+                              placeholder="Email ID" 
+                              [pattern]="EMAIL_PATTERN" required>
+                              </div>
+                  
+                              <div class="alert alert-danger" 
+                              *ngIf="email.touched &&!email.valid">** Please Enter the Email ID
+                              
+                                  <div class="alert alert-danger" 
+                                  *ngIf="email.errors?.pattern">** Appropriate Email Id is required
+                  
+                                  </div>
+                              </div>
+                          </div>
+                  
+                  
+                  
+                          <div class="form-group">
+                            <div class="input-group-prepend">
+                                <span
+                                class="input-group-text"
+                                style="font-size: 25px;margin-right: 5px; color: #0095ff"
+                              >
+                                <i class="fa fa-lock"></i>
+                              </span>
+                            <input #password="ngModel" 
+                            ngModel type="password"
+                             name="password" class="form-control" 
+                             id="password" placeholder="Password" required>
+                            
+                            </div>
+                  
+                            <div class="alert alert-danger" 
+                            *ngIf="password.touched &&!password.valid">** Please Enter the Password
+                  
+                            </div>
+                  
+                        </div>
+                  
+                        <br> 
+                        <button  class="btn btn-success" 
+                        style="width: 100%;" [disabled]="!f.valid">Login</button>
+                        
+                  
+                      </form>
+                      <hr>
+                      <span  style="color: red;font-weight: bold;margin-top: 5px;">
+                                {{incorrect}} </span>
+                
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+</div>
