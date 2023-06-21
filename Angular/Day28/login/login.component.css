@@ -1,0 +1,47 @@
+.loginform{
+    text-align:center;   
+  }    
+  
+  .main-div {
+    background: #fff none repeat scroll 0 0;
+    margin: 10rem auto 30px;
+    /* max-width: 40%; */
+    padding: 50px 70px 70px 71px;
+    border-radius: 15px;
+  }
+  
+  .panel{ 
+    border:0; 
+    border-radius: 0;
+    box-shadow:none; 
+    margin-bottom:0;
+    }
+
+.panel p 
+{ 
+      /* color:#777777; */
+      font-size:14px; 
+      margin-bottom:30px; 
+      line-height:24px;
+}
+
+       
+@media screen and (max-width:400px){
+  .main-div .input-group-prepend  {
+   display: block;
+   /* display: flex; */
+    
+  }
+  .main-div .input-group-prepend .input-group-text {
+    margin-bottom: 25px;
+    justify-content: center;  
+   }
+}
+
+@media screen and (min-width:1000px){
+  .main-div {
+    max-width: 40%;
+  }
+
+  
+}
