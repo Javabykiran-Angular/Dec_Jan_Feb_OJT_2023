@@ -1,0 +1,64 @@
+
+Step 1 
+install Angular Material + angular CDK
+
+npm install --save @angular/material@12.2.* @angular/cdk@12.2.*
+
+To angular animation , we have to install angular animation module
+npm install --save @angular/animations
+
+Step 2 import BrowserAnimationsModule in app.module.ts file
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+step 3 For better Approach create your own module
+ng g m shared/material --flat
+OR
+ng g m material --flat
+
+
+step 4 use  exports:[] 
+first it is import  from angular material (required import key i.e. imports:[CommonModule,]) & then you can export it so you can use it in your project
+
+step 5 (optional) 
+apply inbuild theme in  global style sheet style.css nodemodules/@angular/material/prebuiltsthemes 
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+step 6
+import {MatFormFieldModule} from '@angular/material/form-field';
+Make ur custom css myclass 
+Also use 
+ <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+
+step 7
+import {MatInputModule} from '@angular/material/input';
+use label for 
+<mat-label> => tag
+Use for input tag 
+matInput => Directive
+
+For Error Checking use tag
+<mat-error *ngIf="empname.touched && !empname.valid"> ** Please Enter the  Employee Name</mat-error>
+
+
+step 8 
+For drop down selection use MatSelectModule
+import {MatSelectModule} from '@angular/material/select';
+<mat-form-field >
+      <mat-label>Select Country</mat-label>
+      <mat-select required #country="ngModel" name="country" ngModel>
+          <mat-option>---</mat-option>
+          <mat-option *ngFor="let item of allCountry" [value]="item">
+            {{item.cname}}
+          </mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+step 9
+import {MatButtonModule} from '@angular/material/button';
+<button mat-raised-button color="primary" [disabled]="!f.valid">Primary</button>
+
+
+

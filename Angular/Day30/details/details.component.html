@@ -1,0 +1,41 @@
+
+<div class="container-fluid">
+    <app-header></app-header>
+</div>
+
+
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+            <div>
+              <div class="card myrgb" style="width:400px">                 
+                <div class="card-body">
+                  <h4 class="card-title">{{empobj.name}} </h4>
+                  <div class="card-text">
+                    <h5 style="text-align: center;">
+                    <label for="">Status:</label> &nbsp;  
+                     <span [ngClass]="{
+                        'badge':true,
+                        'badge-pill':true,
+                        'badge-success':empobj.status.toLowerCase() == 'active',
+                        'badge-warning':empobj.status.toLowerCase()=='inactive',
+                        'badge-danger':empobj.status.toLowerCase()=='suspend'
+                    }" style="padding: 10px;" >{{empobj.status}}</span>
+                
+                </h5> 
+                      <span> {{empobj.phoneno}} </span><br>
+                      <span> <strong> {{empobj.createdby}} </strong> </span>
+                      
+                  </div>
+                 
+                 <button class="btn btn-primary"
+                  (click)="OnUpdate()">Update Employee</button> 
+                 <button routerLink="/home" class="btn btn-warning">Home</button>
+          
+            </div>
+      </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.css';
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.bg_background{
+    background-image: url("assets/loginbg.jpg");    
+}
