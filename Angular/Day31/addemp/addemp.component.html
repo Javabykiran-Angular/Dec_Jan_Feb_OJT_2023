@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <app-header></app-header>
+</div>
+
+
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+          <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+            <mat-label>Employee Name</mat-label>
+            <input matInput type="text" placeholder="Enter the Employee Name"
+              #empname="ngModel" ngModel 
+              name="name"        
+              required >
+
+              <mat-error *ngIf="empname.touched && !empname.valid"> ** Please Enter the  Employee Name</mat-error>
+              
+
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+            <mat-label>Employee Phone</mat-label>
+            <input matInput type="number" minlength="10" maxlength="13" placeholder="Enter the Employee Mobile No"
+                      #empphone="ngModel" ngModel 
+                      name="phoneno"
+                      required
+                  >
+              
+              <mat-error *ngIf="empphone.touched && !empphone.valid"> ** Please Enter the  Employee Phone Number</mat-error>
+
+          </mat-form-field>
+
+
+          <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+            <mat-label>Employee Department</mat-label>
+            <input matInput type="text" placeholder="Enter the Employee Department"
+            #empdept="ngModel" ngModel 
+            name="departmentit"
+              required  >
+            
+            <mat-error *ngIf="empdept.touched && !empdept.valid"> ** Please Enter the  Department</mat-error>
+       </mat-form-field>
+
+       <mat-form-field appearance="outline" class="myclass" [color]="'accent'">
+        <mat-label>Employee Status</mat-label>
+        <input matInput type="text" placeholder="Enter the Employee Status"
+        #empstatus="ngModel" ngModel 
+        name="status"
+          required  >
+        
+        <mat-error *ngIf="empstatus.touched && !empstatus.valid"> ** Please Enter the  Status</mat-error>
+   </mat-form-field>
+
+   <mat-form-field class="myclass">
+    <mat-label>Select Country</mat-label>
+    <mat-select required #country="ngModel" name="country" ngModel>
+        <mat-option>---</mat-option>
+        <mat-option *ngFor="let item of allCountry" [value]="item">
+          {{item.cname}}
+        </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" [disabled]="!f.valid">Submit</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>

@@ -1,0 +1,8 @@
+.myclass {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .myclass > * {
+    width: 100%;
+  }

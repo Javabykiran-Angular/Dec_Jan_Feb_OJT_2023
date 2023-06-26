@@ -1,0 +1,84 @@
+
+Step 1
+npm install --save ngx-bootstrap@4.0.0
+or
+npm install --save ngx-bootstrap@5.0.0
+
+For ngx bootstrap u have to install bootstrap version 4.6 is necessary 
+
+Step 2
+Import Module in app.module.ts file
+
+import { ModalModule } from 'ngx-bootstrap/modal';  
+
+also under import section add 
+ModalModule.forRoot(),  
+
+Step 3
+Open Home.component.ts file and add dependency service
+
+import { BsModalService } from 'ngx-bootstrap/modal';
+
+constructor(private modalservice:BsModalService) { }
+
+Step 4 
+Open Home.component.ts file and add reference of model for view file
+
+import { BsModalRef } from 'ngx-bootstrap/modal';
+
+modalRef: BsModalRef;  
+
+Step 5
+Open Home.component.html file and add pop up open functionality
+
+ <button (click)="OpenPopUp(popUp)" class="btn btn-warning">Update Employee</button>
+ 
+ Here popUp is template reference variable of <ng-template> with the help of this template reference variable we open pop up on screen
+ 
+ <ng-template #popUp >
+		// ....
+		//Write here your html tag code
+ </ng-template>
+  
+  
+Step 6
+ On update button to display popup for that Open Home.component.ts file & write the below code 
+ 
+  <button (click)="OpenPopUp(popUp)" class="btn btn-warning">Update Employee</button>
+  
+    config = {
+    animated: true,
+    
+    ignoreBackdropClick: true,
+    class: "alert alert-danger"
+  };
+  
+   OpenPopUp(popup: TemplateRef<any>){
+   
+    this.modalRef = this.modalservice.show(        
+      popup, this.config);
+      
+  }
+  
+   Step 7 
+ Open Home.component.html file and add pop up close functionality
+ on close button just call one method hide()of modal box given by ngx-bootstrap
+ 
+  <button (click)="modalRef.hide()">Cancel</button>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
