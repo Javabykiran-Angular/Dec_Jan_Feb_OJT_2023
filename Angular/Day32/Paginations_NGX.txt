@@ -1,0 +1,32 @@
+
+Implement of Pagination using ngx-Paginations
+
+Step 1 
+ install ngx-pagination pagination Package from terminal
+ 
+ npm install ngx-pagination@5.1.1 --save
+ 
+Step 2 Import Pagination module in app.module.ts file
+ import { NgxPaginationModule } from 'ngx-pagination';
+ 
+Step 3 Now go to home.component.html file
+ and mentioned it there paginate as pipe name on ngFor
+ 
+   <tr *ngFor="let item of EmpData | paginate: { itemsPerPage: 5, currentPage: p }" >
+   
+   here itemsPerPage=> how many records to be shown to mentioned a count 
+   currentPage => required The current (active) page number
+   
+Step 4 in same file home.component.html file
+  
+  after closing of table tag use ngx tag 
+  
+     <pagination-controls (pageChange)="p = $event"></pagination-controls>
+	 
+ Step 5 Now in home.component.ts file
+ Create a property of p i.e.
+ 
+ p:number=1;
+ 
+  
+  
