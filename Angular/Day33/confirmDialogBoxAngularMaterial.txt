@@ -1,0 +1,211 @@
+Install Angular Material + angular CDK
+
+Step 1 
+npm install --save @angular/material@12.2.* @angular/cdk@12.2.*
+
+To angular animation , we have to install angular animation module
+npm install --save @angular/animations
+
+Step 2 import BrowserAnimationsModule in app.module.ts file
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+step 3 For better Approach create your own module
+ng g m shared/material --flat
+OR
+ng g m material --flat
+
+step 4 use  exports:[] 
+first it is import  from angular material (required import key i.e. imports:[CommonModule,]) & then you can export it so you can use it in your project
+
+step 5 (optional)
+apply in build theme in  global style sheet style.css nodemodules/@angular/material/prebuiltsthemes 
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+step 6 create component whose name is mat-confirm-dialog 
+ng g c mat-confirm-dialog
+
+step 7 create confirm dialog service for generalization purpose
+ng g s dialog
+
+step 8 import MatDialogModule in our created module class in import & export Section
+import {MatDialogModule} from '@angular/material/dialog';
+
+step 9 Also import mat-confirm-dialog component in entryComponents in app.module.ts
+entryComponents->
+This is for dynamically added components that are added in Your Application.It tells the offline template compiler to compile them and create factories for them.If you don't list a dynamically added component to entryComponents you'll get an error message a  missing factory because Angular won't have created one.
+
+Step 10 Go to dialog service And Add MatDialog dependency so we can dynamically open & close the dialog.
+import {MatDialog} from '@angular/material/dialog';
+constructor(private dialog:MatDialog) { }
+
+Step 11 Import & export MatIconModule in custom module
+import {MatIconModule} from '@angular/material/icon';
+
+Step 12 Also for material icon visible. There are two ways to implement
+	1 link google font into index.html for online use below link
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	2 If you want to use offline follow the below
+		-  install material-design-icons this:
+			npm install material-design-icons
+		- add the styles to angular.json:
+		   "styles": [
+				"node_modules/material-design-icons/iconfont/material-icons.css"
+			]
+	
+Step 13 Write code in dialog service
+OpenConfirmDialog(){
+ return this.dialog.open(MatConfirmDialogComponent,{
+    width:'390px',
+    panelClass:'confirm-dialog-container', 
+	//Panel class is used to allow our customize dialog box to apply css & make it as custom
+    disableClose:true,
+    position:{top:"35vh"},
+   
+  })
+  }
+  
+ step 14 Now come to home.component.ts click on delete button we have to call dialog service method 
+ Add DI in Contructor level  private dialogservice:DialogService
+ 
+  this.dialogservice.OpenConfirmDialog()
+ 
+ Step 15 Go to MatConfirmDialogComponent html file write down code to display the content which we have to show on dialog.
+ <div>
+    <div class="content-container" >
+      <mat-icon id="close-icon" (click)="OnCloseDialog()">close</mat-icon> 
+      <span class="content-span full-width"> Data to be shown  </span> 
+    </div>
+    <button mat-flat-button id="no-button" [mat-dialog-close]="false" >NO</button>
+    <button mat-flat-button id="yes-button" [mat-dialog-close]="true">yes</button>
+</div>
+
+Step 16 Apply custom css in style.css for content-container class 
+
+ /* mat-confirm-dialog (customised dialog) */
+  .confirm-dialog-container .mat-dialog-container {
+    border-radius: .25em .25em .4em .4em;
+    padding: 0px;
+}
+.confirm-dialog-container .content-container{
+    margin: 5px 5px 15px 5px;
+    color: #8f9cb5;
+    display: flex;
+}
+.confirm-dialog-container #close-icon{
+    margin-left: auto;
+    order: 2;
+    font-weight: bolder;
+}
+.confirm-dialog-container #close-icon:hover{
+cursor: pointer;
+}
+
+.confirm-dialog-container #no-button{
+height: 50px;
+width: 50%;
+background-color: #fc7169;
+color:white;
+border-radius: 0px;
+}
+
+.confirm-dialog-container #yes-button{
+    height: 50px;
+    width: 50%;
+    background-color: #b6bece;
+    color:white;
+    border-radius: 0px;
+}
+
+.confirm-dialog-container span.content-span{
+    padding:  35px 16px;
+    text-align: center;
+    font-size: 20px;
+}
+
+Step 17 If you want pass content through the programatically you can pass it for that open home.component.ts file & pass string msg to method of dialog service
+
+this.dialogservice.OpenConfirmDialog('Are you sure to delete this record?')
+.afterClosed()
+      .subscribe(res=>{
+        console.log(res);
+        if(res){
+          //here call the delete the service
+            //in delete service subscribe method you have to call toastr
+            
+          
+        }
+      })
+
+Step 18 Then update in dialog service also in OpenConfirmDialog method
+
+OpenConfirmDialog(msg){
+ return this.dialog.open(MatConfirmDialogComponent,{
+    width:'390px',
+    panelClass:'confirm-dialog-container',
+    disableClose:true,
+    position:{top:"35vh"},
+    data:{
+      message:msg
+    }
+  })
+  
+Step 19 Then open mat-confirm-dialog component.ts file to receive this msg to import 
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+
+Step 20 We have to inject that data in mat-confirm-dialog so we have to import inject class also that present in @angular/core
+import {  Inject } from '@angular/core';
+
+Step 21 To receive the msg create DI in mat-confirm-dialog 
+
+  constructor(@Inject(MAT_DIALOG_DATA) public data:any)
+  
+  Here data is object to access its key message, in message key it has actual data
+  so go to view file and display msg with the help of string interpolation
+  {{data.message}}
+
+Step 22 To handle click event on close dialog box.To close this dialog for that we have to create reference of this dialog in respective .ts file
+so import in MatDialogRef also create DI of it.
+
+constructor(@Inject(MAT_DIALOG_DATA) public data,
+  public dialogRef:MatDialogRef<MatConfirmDialogComponent>
+  ) { }
+  
+  OnCloseDialog(){
+    //import MatDialogRef
+    this.dialogRef.close(false);  //here it return false to close the dialog
+  }
+
+Step 23 Now Apply event to Yes & no button 
+We use angular directive mat-dialog-close [mat-dialog-close]="false" for no button 
+& for yes button we use [mat-dialog-close]="true"
+
+Step 24 How to receive that true & false value in home component for that we have to return a object (MatDialogRef) from service so in dialog service we have to return a object 
+
+OpenConfirmDialog(msg){
+ return this.dialog.open(MatConfirmDialogComponent,{
+    width:'390px',
+    panelClass:'confirm-dialog-container',
+    disableClose:true,
+    position:{top:"35vh"},
+    data:{
+      message:msg
+    }
+  })
+  
+Step 25 Now in home component.ts file we have to call method of afterClosed()
+
+this.dialogservice.OpenConfirmDialog('Are you sure to delete this record?')
+      .afterClosed()
+	  
+Again afterClosed() method has return observable so we have to call its subscribe method it receives the response i.e. it receive true or false of close button or yes/no button boolean value
+on yes button click you receive true value so when we receive true then & then we have to delete the the record
+if(res){
+//Delete the record..
+}else{
+//Don't delete the record
+}
+
+
+
