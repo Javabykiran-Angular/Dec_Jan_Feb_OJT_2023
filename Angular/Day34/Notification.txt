@@ -1,0 +1,26 @@
+How to use Notification (i.e. it is called toaster)
+
+Step 1 npm install --save ngx-toastr@11.3.3 
+
+Step 2 npm install --save @angular/animations (no need to install we already install in angular material)
+
+Step 3 import BrowserAnimationsModule & ToastrModule  in app.module.ts file
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
+Step 4 add module in imports section
+BrowserAnimationsModule,
+ToastrModule.forRoot({
+      timeOut:5000,
+      positionClass:'toast-top-right',
+      preventDuplicates:true
+    })
+
+Step 5 Use toastr service in respective component as DI-Dependecncy Injection
+import { ToastrService  } from 'ngx-toastr';
+
+Step 6 Use on respective button click to display toast message
+this.toastr.success('Deleted Successfully!!! ');
+
+Step 7 import toastr css in style.css i.e.in global style sheet
+@import '~ngx-toastr/toastr.css';
