@@ -1,0 +1,71 @@
+
+<div class="container-fluid">
+    <app-header></app-header>
+
+    <div class="row">
+        <div class="col">
+            <br>
+            <div>
+                <button routerLink="addemp" class="btn btn-success">Add Employee</button>
+                <button class="btn btn-warning" (click)="onUpdate(popUp)" >Update Employee</button>
+                <button class="btn btn-danger" (click)="onDelete()" >Delete Employee</button>
+                <button (click)="onStatus()" class="btn btn-info">Change Status</button>
+
+                <div class="form-group float-right" style="margin-top: 10px;">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" style="font-size: 1em;margin-right: 2px;">
+                            <i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search"
+                            style="width: min-content;" [(ngModel)]="nameSearch">
+                       </div>
+                  </div>
+
+            </div>
+
+            <ng-template #popUp >                
+                <app-updateemployee [parentdata]="empobj" ></app-updateemployee>
+                <button class="btn btn-danger" (click)="modalRef.hide()">Cancel</button>
+            </ng-template>
+
+<br>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <th>Sr No</th>
+                    <th>Action</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                    <th>Created Date</th>
+                    <th>Created By</th>
+                    <th>Updatated date </th>
+                    <th>Updatated By</th>
+                    <th>Country</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of empData | paginate: { itemsPerPage: 5, currentPage: p } | filter: nameSearch ;index as i">
+                        <td> {{i+1}} </td>
+                        <td><input type="radio" (click)="onEdit(item)" name="record"></td>
+                        <td> <a [routerLink]="['details',item.id]">{{item.name}}</a>  </td>
+                        <td> {{item.departmentit}} </td>
+                        <td><h4><span [ngClass]="{
+                            'badge':true,
+                            'badge-pill':true,
+                            'badge-success':item.status.toLowerCase()==='active',
+                            'badge-warning':item.status.toLowerCase()==='inactive',
+                            'badge-danger':item.status.toLowerCase()==='suspend'
+                        }">{{item.status}}</span></h4>  </td>
+                        <td> {{item.createddtm | date:'mediumDate'}} </td>
+                        <td> {{item.createdby}} </td>
+                        <td> {{item.updateddtm | date:'dd-MM-yyyy' }} </td>
+                        <td> {{item.updatedby}} </td>
+                        <td> {{item.country.cname}} </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls (pageChange)="p = $event" class="pull-right"></pagination-controls>
+
+        </div>
+    </div>
+
+</div>
+
